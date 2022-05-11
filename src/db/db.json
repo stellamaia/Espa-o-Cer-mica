@@ -1,0 +1,50 @@
+{
+  "produtos": [
+    {
+      "imagem": "img1.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    },
+    {
+      "imagem": "img2.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    },
+    {
+      "imagem": "img3.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    },
+    {
+      "imagem": "img4.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    },
+    {
+      "imagem": "img5.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    },
+    {
+      "imagem": "img6.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    },
+
+    {
+      "imagem": "img7.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    },
+    {
+      "imagem": "img8.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    },
+    {
+      "imagem": "img9.jpeg",
+      "descricao": "Sou um produto",
+      "preco": 85.00
+    }
+  ]
+}

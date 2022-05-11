@@ -1,28 +1,27 @@
 <template>
   <div class="about">
-<b-row>
-          <b-col cols="12" sm="12" md="12" lg="12" xl="12">
-    <div style="height: 270px; width: 100%,">
-      <l-map :zoom="zoom" :center="center" style="height: 100%">
-        <l-tile-layer :url="url" :attribution="attribution" />
-        <l-marker  :lat-lng="withPopup" >
-        <l-popup>
-          <div class="pop" >
-            Espaço Cerâmica
-            
-          </div>
-        </l-popup>
-        </l-marker>
-      </l-map>
+    <div>
+    <b-row>
+      <b-col cols="12" sm="12" md="12" lg="12" xl="12">
+        <div class="mapa">
+          <l-map :zoom="zoom" :center="center" style="height: 100%">
+            <l-tile-layer :url="url" :attribution="attribution" />
+            <l-marker :lat-lng="withPopup">
+              <l-popup>
+                <div class="pop">Espaço Cerâmica</div>
+              </l-popup>
+            </l-marker>
+          </l-map>
+        </div>
+      </b-col>
+    </b-row>
     </div>
-    </b-col>
-  </b-row>
   </div>
 </template> 
 
 <script>
 import { latLng, Icon } from "leaflet";
-import { LMap, LTileLayer, LMarker,LPopup  } from "vue2-leaflet";
+import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -37,14 +36,13 @@ export default {
     LTileLayer,
     LMarker,
     LPopup,
-    
   },
   data() {
     return {
       zoom: 14,
-      
+
       center: latLng(-18.931161, -48.288986),
-      url: 'https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=1821088f60a947408a2b766b75db695f',
+      url: "https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=1821088f60a947408a2b766b75db695f",
       attribution: "Mapa",
       withPopup: latLng(-18.931161, -48.288986),
       currentZoom: 10,
@@ -55,12 +53,16 @@ export default {
 };
 </script>
 <style scoped>
-.about{
-  padding-bottom:30px ;
 
+.about {
+  padding-bottom: 30px;
 }
-.pop{
- font-weight: bold;
+.mapa {
+  height: 270px;
+  width: 100%;
+  
 }
-
+.pop {
+  font-weight: bold;
+}
 </style>
