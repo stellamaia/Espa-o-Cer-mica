@@ -58,6 +58,11 @@
         </div>
       </b-col>
     </b-row>
+
+
+
+
+
   </div>
 </template>
 <style scoped>
@@ -82,5 +87,8 @@
   text-transform: uppercase;
     font-size: 12px;
 }
-
+.teste{
+  height:500px ;
+  background-color: rgb(179, 179, 179);
+}
 </style>

@@ -1,14 +1,12 @@
 <template>
-    <div class="InfosContato">
-         
+  <div class="InfosContato">
     <div class="informacoes">
       <b-container>
-              <p class="titulo">Espaço-Cerâmica</p>
+        <p class="titulo">Espaço-Cerâmica</p>
         <b-row>
           <b-col cols="12" sm="12" md="12" lg="5" xl="7">
             <b-col cols="12" sm="6" md="6" lg="12" xl="12">
               <div class="informacoes-endereco">
-               
                 <p class="informacoes-endereco__completo">
                   End: Av. Bernardino de Campos, 98
                 </p>
@@ -24,7 +22,7 @@
               </div>
             </b-col>
 
-            <b-col >
+            <b-col>
               <div class="horarios">
                 <p class="horarios-dias">Seg - sex: 7:00 - 22:00</p>
                 <p class="horarios-dias">Sábado: 8:00 - 22:00</p>
@@ -32,6 +30,7 @@
               </div>
             </b-col>
           </b-col>
+
           <b-col cols="12" sm="" md="" lg="7" xl="5">
             <b-row>
               <b-col md="6" lg="5" xl="6">
@@ -61,50 +60,44 @@
                 <b-form-input id="firstName" type="text"></b-form-input>
               </b-col>
             </b-row>
+            <b-row>
+              <b-col md="12" lg="10" xl="12">
+                <div class="enviar">
+                  <button class="enviar-bt">Enviar</button>
+                </div>
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col md="12" lg="12" xl="12">
+                <p class="noticia">Receba nossa Newsletter</p>
+                <label class="label__text___newsletter" for="phone"
+                  >Insira o seu email aqui*</label
+                >
+              </b-col>
+            </b-row>
 
             <b-row>
-              <div class="enviar">
-                <button class="enviar-bt">Enviar</button>
-              </div>
-              <p class="noticia">Receba nossa Newsletter</p>
-              <label class="label__text___newsletter" for="phone"
-                >Insira o seu email aqui*</label
-              >
-
-
-<b-col cols="12" sm="12" md="12" lg="12" xl="12">
-        <b-row>
-          <b-col cols="12" sm="7" md="6" lg="6" xl="8">
-            <div class="inserir-email">
-                <b-form-input class="noticia-input"></b-form-input>
-            </div>
-          </b-col>
-          <b-col cols="12" sm="5" md="3" lg="4" xl="4">
-              <button class="enviar-email">Participar</button>
-          </b-col>
-        </b-row>
-
-
-
-
-     </b-col>
-        
-              
-        
-
-           
-              
-  
+              <b-col cols="12" sm="12" md="12" lg="12" xl="12">
+                <b-row>
+                  <b-col cols="12" sm="7" md="6" lg="6" xl="8">
+                    <div class="inserir-email">
+                      <b-form-input class="noticia-input"></b-form-input>
+                    </div>
+                  </b-col>
+                  <b-col cols="12" sm="5" md="3" lg="4" xl="4">
+                    <button class="enviar-email">Participar</button>
+                  </b-col>
+                </b-row>
+              </b-col>
             </b-row>
           </b-col>
         </b-row>
       </b-container>
     </div>
-    </div>
+  </div>
 </template>
 <style  scoped>
-
-.InfosContato{
+.InfosContato {
   background-color: white;
 }
 
@@ -118,7 +111,7 @@
 }
 .titulo {
   text-transform: uppercase;
-font-weight: bold;
+  font-weight: bold;
   font-size: 15px;
   padding-bottom: 70px;
 }
@@ -193,5 +186,4 @@ font-weight: bold;
   height: 32px;
   width: 100%;
 }
-
 </style>
