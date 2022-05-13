@@ -1,39 +1,43 @@
 <template>
   <div class="app">
     <div class="conteudo">
-      <b-container class="mobile">
+      <b-container class="conteudo-mobile">
         <b-row class="text-center">
-          <b-col cols="2" sm="1" md="1" >
-            <img class="cont-img" alt="" src="../assets/carrinho.png" />
-          </b-col>
-          <b-col cols="8" sm="10" md="10" >
-            <b-link class="frase">Espaço Cerâmica</b-link>
+          <b-col cols="2" sm="1" md="1">
+            <img
+              class="conteudo-mobile__img"
+              alt=""
+              src="../assets/carrinho.png"
+            />
           </b-col>
 
-          <b-col cols="2" sm="1" md="1" >
-            <button class="icone-list"  v-b-toggle.sidebar-no-header> </button>
+          <b-col cols="8" sm="10" md="10">
+            <b-link class="conteudo-mobile__frase">Espaço Cerâmica</b-link>
+          </b-col>
+
+          <b-col cols="2" sm="1" md="1">
+            <button class="icone-list" v-b-toggle.sidebar-no-header></button>
           </b-col>
         </b-row>
-
       </b-container>
-<div class="desk">
-          <b-row class="text-center" >
-           <b-col lg="4" xl="3" >
-            <b-link class="frase">Espaço Cerâmica</b-link>
+      <div class="conteudo-desktop">
+        <b-row class="text-center">
+          <b-col lg="4" xl="3">
+            <b-link class="conteudo-desktop__frase">Espaço-Cerâmica</b-link>
           </b-col>
-      <b-col lg="4" xl="6">
-        <div class="list">
-          <b-link class="header__link active" href="#foo">Home</b-link>
-          <b-link class="header__link" href="#foo">Loja</b-link>
-          <b-link class="header__link" href="#foo">Sobre</b-link>
-          <b-link class="header__link" href="#foo">Contato</b-link>
-        </div>
-      </b-col>
-      <b-col  lg="4" xl="3">
-        <img class="cont-img" alt="" src="../assets/carrinho.png" />
-      </b-col>
-    </b-row>
-    </div>
+          <b-col lg="4" xl="6">
+            <div class="conteudo-desktop__lista">
+              <b-link class="header__link active" href="#foo">Home</b-link>
+              <b-link class="header__link" href="#foo">Loja</b-link>
+              <b-link class="header__link" href="#foo">Sobre</b-link>
+              <b-link class="header__link" href="#foo">Contato</b-link>
+            </div>
+          </b-col>
+          <b-col lg="4" xl="3">
+            <img class="cont-img" alt="" src="../assets/carrinho.png" />
+          </b-col>
+        </b-row>
+      </div>
       <b-sidebar
         class="side"
         id="sidebar-no-header"
@@ -71,11 +75,6 @@
         </template>
       </b-sidebar>
     </div>
-
-
-
-  
-  
   </div>
 </template>
 <style scoped>
@@ -86,26 +85,32 @@
 .conteudo {
   padding-top: 40px;
 }
-.cont-img{
+.conteudo-mobile__img {
   cursor: pointer;
 }
-.icone-list{
-  border:1px solid rgba(162, 41, 41, 0);
- 
- height: 30px;
- width: 27px;
-background: no-repeat  url("../assets/menu.png");
- 
+.icone-list {
+  border: 1px solid rgba(162, 41, 41, 0);
+
+  height: 30px;
+  width: 27px;
+  background: no-repeat url("../assets/menu.png");
 }
-.frase {
+.conteudo-mobile__frase {
   text-decoration: none;
 
   font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 2.7px;
-    text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: black;
+}
+.conteudo-desktop__frase {
+  text-decoration: none;
 
-
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: black;
 }
 .btn-secondary {
@@ -118,7 +123,7 @@ background: no-repeat  url("../assets/menu.png");
   color: black !important;
   border: 0;
 }
-.sid{
+.sid {
   padding: 60px 40px 0 40px;
 }
 .login {
@@ -126,12 +131,11 @@ background: no-repeat  url("../assets/menu.png");
 }
 
 .header__link {
- 
   text-decoration: none;
   padding-bottom: 5px;
-  padding-left:20px ;
+  padding-left: 20px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   color: black;
 }
 .header__link:hover {
@@ -141,26 +145,19 @@ background: no-repeat  url("../assets/menu.png");
   text-decoration: none;
   color: #91664c;
 }
-@media screen and (min-width:320px) and (max-width: 1024px){
-
-.desk{
-  display: none;
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .conteudo-desktop {
+    display: none;
+  }
 }
-
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .conteudo-mobile {
+    display: none;
+  }
 }
-@media screen and (min-width:1025px) and (max-width: 1200px){
-
-.mobile{
-  display: none;
+@media screen and (min-width: 1201px) {
+  .conteudo-mobile {
+    display: none;
+  }
 }
-
-}
-@media screen and (min-width:1201px) {
-
-.mobile{
-  display: none;
-}
-
-}
-
 </style>

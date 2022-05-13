@@ -6,21 +6,7 @@
     <InfosCards />
     
   
-    <div class="colecao">
-      <h2 class="colecao-frase">Nossa coleção</h2>
-      <div class="container">
-        <p class="colecao-paragrafo">
-          Tendo como inspiração as formas, cores e texturas da natureza,
-          produzimos desde 2012, cerâmica utilitária e decorativa. Aqui tudo é
-          feito à mão: a mistura de argilas, a confecção dos moldes em gesso, a
-          modelagem, esmaltação e pintura das peças. As queimas são realizadas
-          em fornos a gás, que atingem 1280oC e garantem um material refratário,
-          que pode ir ao forno e microondas. Devido a esse processo totalmente
-          artesanal, cada objeto se torna único. Isso é o que encanta no
-          universo da cerâmica!
-        </p>
-      </div>
-    </div>
+  
  <ItensCards />
   
       <InfosContato />
@@ -86,19 +72,6 @@ nav a.router-link-exact-active {
 }
 .app {
   background-color: #eeeeeed9;
-}
-.colecao {
-  background-color: white;
-  padding: 20px;
-}
-.colecao-frase {
-  text-align: center;
-  text-transform: uppercase;
-  padding: 30px 0 30px 0;
-}
-.colecao-paragrafo {
-  text-align: center;
-  margin: 30px;
 }
 
 </style>

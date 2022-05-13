@@ -186,4 +186,16 @@
   height: 32px;
   width: 100%;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 575px) {
+ .informacoes {
+
+  padding: 30px;
+
+}
+}
 </style>

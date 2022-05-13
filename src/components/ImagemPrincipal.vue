@@ -32,7 +32,7 @@
   text-align: center;
   z-index: 2;
   position: relative;
-  top: 20vh;
+  top: 25vh;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -41,18 +41,24 @@
     height: 70vh;
   }
   .principal {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
+  .header-content {
+
+  z-index: 2;
+  position: relative;
+  top: 17vh;
+}
 }
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .principal {
-    font-size: 4.2rem;
+    font-size: 4.7rem;
   }
 }
 
 @media screen and (min-width: 1201px) {
   .principal {
-    font-size: 4.6rem;
+    font-size: 5.3rem;
   }
 }
 .principal {
@@ -62,8 +68,8 @@
   text-align: center;
 }
 .sub-titulo {
-  padding-top: 10px;
-  font-size: 30px;
+  padding-top: 30px;
+  font-size: 25px;
   color: white;
 }
 .btn {
@@ -73,7 +79,7 @@
   background-color: black;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   height: 50px;
   width: 220px;
   border: none;
