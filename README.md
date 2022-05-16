@@ -3,6 +3,7 @@ em Contrução
 
 
 ** npm run serve
+
 ** dentro da basta db - json-server --watch db.json
 
 ![Captura de Tela 2022-05-09 às 01 27 16](https://user-images.githubusercontent.com/78916702/167341078-36a4ae27-0bab-4c99-9f2c-877750d4e08e.png)
