@@ -76,12 +76,12 @@
 .seguranca-frase {
   text-transform: uppercase;
 
-font-size: 14px;
+  font-size: 14px;
   padding-top: 7px;
 }
 .metodos {
   text-transform: uppercase;
- font-size: 14px;
+  font-size: 14px;
 }
 .teste {
   height: 500px;
@@ -99,7 +99,6 @@ font-size: 14px;
   .InfosFooter {
     padding: 20px;
     text-align: center;
-  
   }
   .imagem-seguranca {
     text-align: end;

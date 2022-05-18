@@ -34,7 +34,7 @@
             </div>
           </b-col>
           <b-col lg="4" xl="3">
-            <img class="cont-img" alt="" src="../assets/carrinho.png" />
+            <img class="conteudo-desktop-img" alt="" src="../assets/carrinho.png" />
           </b-col>
         </b-row>
       </div>
@@ -58,7 +58,7 @@
                 <h4 class="login" id="sidebar-no-header-title">Login</h4>
               </b-col>
               <b-col cols="1" sm="1" md="1" lg="1" xl="1">
-                <b-button block @click="hide">
+                <b-button  class="botao-fechar" block @click="hide">
                   <b-icon icon="x-lg"></b-icon
                 ></b-button>
               </b-col>
@@ -88,6 +88,25 @@
 .conteudo-mobile__img {
   cursor: pointer;
 }
+.conteudo-desktop-img{
+  cursor: pointer;
+
+} 
+.conteudo-desktop-img:hover{
+  height: 30px;
+} 
+.bi-x-lg{
+  color: rgb(0, 0, 0)!important;
+
+
+}
+.bi-x-lg:hover{
+   color: rgba(65, 65, 65, 0.845)!important;
+
+}
+
+
+
 .icone-list {
   border: 1px solid rgba(162, 41, 41, 0);
 

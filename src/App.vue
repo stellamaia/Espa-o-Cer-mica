@@ -1,17 +1,12 @@
 <template>
   <div id="app" class="app">
     <NavBar />
-        <ImagemPrincipal />
-
+    <ImagemPrincipal />
     <InfosCards />
-    
-  
-  
- <ItensCards />
-  
-      <InfosContato />
+    <ItensCards />
+    <InfosContato />
     <GoogleMap />
-       <InfosFooter />
+    <InfosFooter />
     <!-- <nav>
      <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -21,7 +16,6 @@
   </div>
 </template>
 <script>
-
 import NavBar from "./components/NavBar";
 import ImagemPrincipal from "./components/ImagemPrincipal";
 import InfosCards from "./components/InfosCards";
@@ -29,7 +23,6 @@ import ItensCards from "./components/ItensCards";
 import InfosContato from "./components/InfosContato";
 import GoogleMap from "./components/GoogleMap";
 import InfosFooter from "./components/InfosFooter";
-
 
 export default {
   name: "app",
@@ -40,13 +33,12 @@ export default {
     ItensCards,
     InfosContato,
     GoogleMap,
-    InfosFooter
+    InfosFooter,
   },
 };
 </script>
 
 <style>
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -73,5 +65,4 @@ nav a.router-link-exact-active {
 .app {
   background-color: #eeeeeed9;
 }
-
 </style>

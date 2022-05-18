@@ -1,20 +1,20 @@
 <template>
   <div class="about">
     <div>
-    <b-row>
-      <b-col cols="12" sm="12" md="12" lg="12" xl="12">
-        <div class="mapa">
-          <l-map :zoom="zoom" :center="center" style="height: 100%">
-            <l-tile-layer :url="url" :attribution="attribution" />
-            <l-marker :lat-lng="withPopup">
-              <l-popup>
-                <div class="pop">Espaço Cerâmica</div>
-              </l-popup>
-            </l-marker>
-          </l-map>
-        </div>
-      </b-col>
-    </b-row>
+      <b-row>
+        <b-col cols="12" sm="12" md="12" lg="12" xl="12">
+          <div class="mapa">
+            <l-map :zoom="zoom" :center="center" style="height: 100%">
+              <l-tile-layer :url="url" :attribution="attribution" />
+              <l-marker :lat-lng="withPopup">
+                <l-popup>
+                  <div class="pop">Espaço Cerâmica</div>
+                </l-popup>
+              </l-marker>
+            </l-map>
+          </div>
+        </b-col>
+      </b-row>
     </div>
   </div>
 </template> 
@@ -53,14 +53,12 @@ export default {
 };
 </script>
 <style scoped>
-
 .about {
   padding-bottom: 30px;
 }
 .mapa {
   height: 270px;
   width: 100%;
-  
 }
 .pop {
   font-weight: bold;

@@ -44,11 +44,10 @@
     font-size: 2.7rem;
   }
   .header-content {
-
-  z-index: 2;
-  position: relative;
-  top: 17vh;
-}
+    z-index: 2;
+    position: relative;
+    top: 17vh;
+  }
 }
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .principal {
