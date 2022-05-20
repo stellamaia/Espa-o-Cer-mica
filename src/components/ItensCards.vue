@@ -27,7 +27,7 @@
             </b-card-body>
           
           </b-card>
-            <button class="botao-comprar"  >Adicionar ao carrinho</button>
+            <button class="botao-comprar">Adicionar ao carrinho</button>
         </b-col>
       </b-row>
     </b-container>
