@@ -3,12 +3,33 @@
     <div class="conteudo">
       <b-container class="conteudo-mobile">
         <b-row class="text-center">
-          <b-col cols="2" sm="1" md="1">
+          
+          <b-col cols="1" sm="1" md="1">
+            {{ itensDoCarrinhoStore.length }} 
             <img
               class="conteudo-mobile__img"
               alt=""
               src="../assets/carrinho.png"
+              v-b-toggle.sidebar-1
             />
+            <b-sidebar id="sidebar-1" title="Sacola" shadow>
+   
+                <div v-for="produto in itensDoCarrinhoStore" :key="produto.id">
+          
+                  <b-card class=" produtos mb-3" img-left :img-src="getImgUrl(produto.imagem)">
+                    <b-card-body>
+                      <b-card-title class="produtos-texto">
+                        {{ produto.descricao }}
+                      </b-card-title>
+                      <b-card-sub-title class="produtos-valor">
+                        R$ {{ produto.preco }}</b-card-sub-title
+                      >
+                    </b-card-body>
+                  </b-card>
+              
+                </div>
+             
+            </b-sidebar>
           </b-col>
 
           <b-col cols="8" sm="10" md="10">
@@ -34,7 +55,12 @@
             </div>
           </b-col>
           <b-col lg="4" xl="3">
-            <img class="conteudo-desktop-img" alt="" src="../assets/carrinho.png" />
+            {{ itensDoCarrinhoStore.length }}
+            <img
+              class="conteudo-desktop-img"
+              alt=""
+              src="../assets/carrinho.png"
+            />
           </b-col>
         </b-row>
       </div>
@@ -58,7 +84,7 @@
                 <h4 class="login" id="sidebar-no-header-title">Login</h4>
               </b-col>
               <b-col cols="1" sm="1" md="1" lg="1" xl="1">
-                <b-button  class="botao-fechar" block @click="hide">
+                <b-button class="botao-fechar" block @click="hide">
                   <b-icon icon="x-lg"></b-icon
                 ></b-button>
               </b-col>
@@ -77,10 +103,55 @@
     </div>
   </div>
 </template>
+<script>
+import { mapState } from "vuex";
+
+export default {
+  name: "NavBar",
+  computed: {
+    ...mapState(["itensDoCarrinhoStore"]),
+  },
+  methods: {
+    getImgUrl(pic) {
+      return require("../assets/" + pic);
+    },
+  },
+};
+</script>
 <style scoped>
 .app {
   font-family: "Montserrat", sans-serif;
   height: 100px;
+}
+
+.produtos {
+  border: 0;
+  background-color:#ffffff;
+  text-align: center;
+  height: 150px;
+}
+.produtos-texto {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0 1px 0 1px;
+  border: 0; 
+}
+
+.produtos-valor {
+  color: #717171;
+  font-weight: 500;
+  font-size: 14px;
+  border: 0;
+  text-align: center;
+}
+
+.card-img-left {
+
+  cursor: pointer;
+  border-radius: 20px;
+height:80px;
+width: 80px;
+
 }
 .conteudo {
   padding-top: 40px;
@@ -88,24 +159,18 @@
 .conteudo-mobile__img {
   cursor: pointer;
 }
-.conteudo-desktop-img{
+.conteudo-desktop-img {
   cursor: pointer;
-
-} 
-.conteudo-desktop-img:hover{
+}
+.conteudo-desktop-img:hover {
   height: 30px;
-} 
-.bi-x-lg{
-  color: rgb(0, 0, 0)!important;
-
-
 }
-.bi-x-lg:hover{
-   color: rgba(65, 65, 65, 0.845)!important;
-
+.bi-x-lg {
+  color: rgb(0, 0, 0) !important;
 }
-
-
+.bi-x-lg:hover {
+  color: rgba(65, 65, 65, 0.845) !important;
+}
 
 .icone-list {
   border: 1px solid rgba(162, 41, 41, 0);

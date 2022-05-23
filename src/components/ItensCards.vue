@@ -12,7 +12,7 @@
           lg="4"
           xl="4"
         >
-          <b-card     no-body class="produtos" 
+          <b-card no-body class="produtos" 
           :img-src="getImgUrl(produto.imagem)">
             <button class="botao-card">Visualização rápida</button>
 
@@ -27,7 +27,7 @@
             </b-card-body>
           
           </b-card>
-            <button class="botao-comprar">Adicionar ao carrinho</button>
+            <button class="botao-comprar" @click="addToCarByStore(produto)">Adicionar ao carrinho</button>
         </b-col>
       </b-row>
     </b-container>
@@ -54,6 +54,9 @@ export default {
   methods: {
     getImgUrl(pic) {
       return require("../assets/" + pic);
+    },
+    addToCarByStore(produto) {
+      this.$store.dispatch("addToCarAction", produto);
     },
   },
 };
