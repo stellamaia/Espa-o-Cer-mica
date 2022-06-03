@@ -5,8 +5,9 @@ em Contrução
 ** npm run serve
 
 ** dentro da basta db - json-server --watch db.json
+![Captura de Tela 2022-06-03 às 10 51 57](https://user-images.githubusercontent.com/78916702/171867671-5a38f54e-d76d-4c54-89b0-c6caa130845f.png)
 
-![Captura de Tela 2022-05-09 às 01 27 16](https://user-images.githubusercontent.com/78916702/167341078-36a4ae27-0bab-4c99-9f2c-877750d4e08e.png)
+
 
 ![Captura de Tela 2022-05-17 às 20 42 48](https://user-images.githubusercontent.com/78916702/168929608-9c666fef-5378-41aa-9562-ab2a59b1869f.png)
 
