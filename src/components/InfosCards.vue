@@ -87,10 +87,12 @@
   background-color: #eeeeeed9;
 }
 .bloco {
-  padding: 70px;
+  padding: 0px;
 }
 
-.conjunto-cards {
+.conjunto{
+  padding:25px
+}.conjunto-cards {
   text-align: center;
   border-radius: 0;
   border: none;
@@ -125,6 +127,6 @@
 }
 .colecao-paragrafo {
   text-align: center;
-  margin: 30px;
+  margin: 30px 15px 0 15px;
 }
 </style>

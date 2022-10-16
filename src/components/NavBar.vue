@@ -1,17 +1,32 @@
 <template>
   <div class="app">
-    <div class="conteudo">
-      <b-container class="conteudo-mobile">
-        <b-row class="text-center">
+    <b-navbar toggleable="lg" type="dark" variant="info">
+      <div>
+        <img class="logo-ceramica" src="../assets/logo-ceramica.png" alt="" />
+      </div>
+
+      <b-navbar-toggle target="nav-collapse">
+        <div class="imagem-menu"></div>
+      </b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item href="#">Home</b-nav-item>
+          <b-nav-item href="#">Loja</b-nav-item>
+          <b-nav-item href="#">Sobre</b-nav-item>
+          <b-nav-item href="#">Contato</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+      
+      <b-col class="carrinho" cols="1" sm="1" md="1">
+       {{ itensDoCarrinhoStore.length }} 
           
-          <b-col cols="1" sm="1" md="1">
-            {{ itensDoCarrinhoStore.length }} 
             <img
               class="conteudo-mobile__img"
               alt=""
               src="../assets/carrinho.png"
               v-b-toggle.sidebar-1
-            />
+              />
             <b-sidebar id="sidebar-1" title="Sacola" shadow>
    
                 <div v-for="produto in itensDoCarrinhoStore" :key="produto.id">
@@ -32,75 +47,8 @@
             </b-sidebar>
           </b-col>
 
-          <b-col cols="8" sm="10" md="10">
-            <b-link class="conteudo-mobile__frase">Espaço Cerâmica</b-link>
-          </b-col>
 
-          <b-col cols="2" sm="1" md="1">
-            <button class="icone-list" v-b-toggle.sidebar-no-header></button>
-          </b-col>
-        </b-row>
-      </b-container>
-      <div class="conteudo-desktop">
-        <b-row class="text-center">
-          <b-col lg="4" xl="3">
-            <b-link class="conteudo-desktop__frase">Espaço-Cerâmica</b-link>
-          </b-col>
-          <b-col lg="4" xl="6">
-            <div class="conteudo-desktop__lista">
-              <b-link class="header__link active" href="#foo">Home</b-link>
-              <b-link class="header__link" href="#foo">Loja</b-link>
-              <b-link class="header__link" href="#foo">Sobre</b-link>
-              <b-link class="header__link" href="#foo">Contato</b-link>
-            </div>
-          </b-col>
-          <b-col lg="4" xl="3">
-            {{ itensDoCarrinhoStore.length }}
-            <img
-              class="conteudo-desktop-img"
-              alt=""
-              src="../assets/carrinho.png"
-            />
-          </b-col>
-        </b-row>
-      </div>
-      <b-sidebar
-        class="side"
-        id="sidebar-no-header"
-        aria-labelledby="sidebar-no-header-title"
-        no-header
-        right
-        shadow
-      >
-        <template #default="{ hide }">
-          <div class="sid">
-            <b-row>
-              <b-col cols="2" sm="2" md="2" lg="2" xl="2">
-                <b-button block @click="hide">
-                  <b-icon icon="person-circle"></b-icon
-                ></b-button>
-              </b-col>
-              <b-col cols="8" sm="8" md="8" lg="8" xl="8">
-                <h4 class="login" id="sidebar-no-header-title">Login</h4>
-              </b-col>
-              <b-col cols="1" sm="1" md="1" lg="1" xl="1">
-                <b-button class="botao-fechar" block @click="hide">
-                  <b-icon icon="x-lg"></b-icon
-                ></b-button>
-              </b-col>
-            </b-row>
-            <b-container class="list">
-              <b-row cols="12">
-                <b-link class="header__link active" href="#foo">Home</b-link>
-                <b-link class="header__link" href="#foo">Loja</b-link>
-                <b-link class="header__link" href="#foo">Sobre</b-link>
-                <b-link class="header__link" href="#foo">Contato</b-link>
-              </b-row>
-            </b-container>
-          </div>
-        </template>
-      </b-sidebar>
-    </div>
+    </b-navbar>
   </div>
 </template>
 <script>
@@ -121,127 +69,72 @@ export default {
 <style scoped>
 .app {
   font-family: "Montserrat", sans-serif;
-  height: 100px;
-}
-
-.produtos {
-  border: 0;
-  background-color:#ffffff;
-  text-align: center;
-  height: 150px;
-}
-.produtos-texto {
-  font-weight: 600;
-  font-size: 15px;
-  padding: 0 1px 0 1px;
-  border: 0; 
-}
-
-.produtos-valor {
-  color: #717171;
-  font-weight: 500;
-  font-size: 14px;
-  border: 0;
-  text-align: center;
-}
-
-.card-img-left {
-
-  cursor: pointer;
-  border-radius: 20px;
-height:80px;
-width: 80px;
 
 }
-.conteudo {
-  padding-top: 40px;
-}
-.conteudo-mobile__img {
-  cursor: pointer;
-}
-.conteudo-desktop-img {
-  cursor: pointer;
-}
-.conteudo-desktop-img:hover {
-  height: 30px;
-}
-.bi-x-lg {
-  color: rgb(0, 0, 0) !important;
-}
-.bi-x-lg:hover {
-  color: rgba(65, 65, 65, 0.845) !important;
-}
 
-.icone-list {
-  border: 1px solid rgba(162, 41, 41, 0);
-
-  height: 30px;
-  width: 27px;
-  background: no-repeat url("../assets/menu.png");
+.navbar-expand-lg .navbar-collapse {
+  justify-content: center;
 }
-.conteudo-mobile__frase {
-  text-decoration: none;
-
-  font-weight: 500;
-  font-size: 16px;
+.bg-info {
+  background-color: white !important;
+  position: fixed;
+  z-index:2;
+  width: 100%;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(124 124 124) !important;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgb(74, 74, 74) !important;
+}
+.navbar-dark .navbar-brand {
+  font-size: 12px;
   letter-spacing: 6px;
   text-transform: uppercase;
   color: black;
+  margin: 0;
+  padding: 0;
 }
-.conteudo-desktop__frase {
+.navbar-dark .navbar-brand:hover {
+  color: black;
+}
+nav.navbar.navbar-dark.bg-info.navbar-expand-lg {
+  padding: 10px;
+}
+.navbar-toggler {
   text-decoration: none;
+}
 
-  font-weight: 500;
+.logo-ceramica {
+  width: 40px;
+  margin-left: 10px;
+}
+.imagem-menu {
+  background: no-repeat url("../assets/menu.png");
+  height: 30px;
+  width: 27px;
+}
+
+.navbar-dark .navbar-nav .nav-link[data-v-4295d220] {
+  padding-left: 10px;
+}
+img.card-img-left{
+  width: 150px;
+
+}
+.card-body{
+  padding:10px 5px 10px 5px;
+}
+.card-title { 
   font-size: 15px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: black;
 }
-.btn-secondary {
-  background-color: #c25c1d00;
-  color: black;
-  border: 0;
+.text-muted {
+font-size: 13px;
 }
-.btn-secondary:hover {
-  background-color: #8c370200 !important;
-  color: black !important;
-  border: 0;
+.produtos{
+  margin: 20px;
 }
-.sid {
-  padding: 60px 40px 0 40px;
-}
-.login {
-  padding: 5px;
-}
-
-.header__link {
-  text-decoration: none;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  font-weight: 500;
-  font-size: 16px;
-  color: black;
-}
-.header__link:hover {
-  color: #72503b;
-}
-.active {
-  text-decoration: none;
-  color: #91664c;
-}
-@media screen and (min-width: 320px) and (max-width: 1024px) {
-  .conteudo-desktop {
-    display: none;
-  }
-}
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-  .conteudo-mobile {
-    display: none;
-  }
-}
-@media screen and (min-width: 1201px) {
-  .conteudo-mobile {
-    display: none;
-  }
+button.close.text-dark{
+  background: none!important;
 }
 </style>

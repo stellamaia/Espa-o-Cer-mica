@@ -59,6 +59,8 @@ export default {
 .mapa {
   height: 270px;
   width: 100%;
+  z-index:1;
+  position: relative;
 }
 .pop {
   font-weight: bold;

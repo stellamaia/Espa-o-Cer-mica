@@ -103,7 +103,7 @@
 
 .informacoes {
   background-color: white;
-  padding: 60px;
+  padding: 60px 10px 60px 10px;
   color: black;
 }
 .informacoes-endereco {
@@ -113,6 +113,7 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
+  text-align: center;
   padding-bottom: 70px;
 }
 .informacoes-endereco__completo {
@@ -130,28 +131,32 @@
   border: none;
   border-bottom: 1px solid black;
   border-radius: 0;
+  padding: 0 ;
 }
 .label__text {
-  color: black;
-  font-weight: 400;
+  color: rgb(95, 94, 94);
+  font-weight: 600;
+  padding-top: 10px;
+ 
 }
 .label__text___mensagem {
   padding: 30px 0 10px 0;
 }
 .enviar {
   text-align: center;
-  padding: 10px 0 30px 0;
+  padding: 40px 0 30px 0;
 }
 .enviar-bt {
   height: 40px;
   width: 200px;
-  background-color: rgba(255, 255, 255, 0.632);
-  color: rgb(0, 0, 0);
+  background-color: black;
+  color: rgb(255, 255, 255);
   font-weight: 500;
 }
 .enviar-bt:hover {
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
 }
 .noticia {
   color: black;

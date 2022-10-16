@@ -22,15 +22,19 @@
   width: 100%;
   height: calc(100vh - 150px);
   font-family: "Montserrat", sans-serif;
+  z-index:1;
+  position: relative;
 }
 .back {
   background-color: rgba(9, 9, 9, 0.454);
   width: 100%;
   height: calc(100vh - 150px);
+  z-index:1;
+  position: relative;
 }
 .header-content {
   text-align: center;
-  z-index: 2;
+  z-index:-2 ;
   position: relative;
   top: 25vh;
 }
@@ -81,6 +85,7 @@
   font-size: 14px;
   height: 50px;
   width: 220px;
+
   border: none;
 }
 .botao:hover {
